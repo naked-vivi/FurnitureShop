@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { siteConfig } from "@/config/site"
 import type { MainNavItems } from "@/types"
-import { Icons } from "@/components/Icons"
+import { Icons } from "@/components/icons"
 import { Button } from "../ui/button"
 import {
     Sheet,
@@ -24,7 +24,7 @@ interface MobileNavigationProps {
 
 export default function MobileNavigation({ items }: MobileNavigationProps) {
     return (
-        <div>
+        <div className="lg:hidden">
             <Sheet>
                 <SheetTrigger asChild>
                     <Button variant="ghost">

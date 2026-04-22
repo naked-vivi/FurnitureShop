@@ -1,7 +1,7 @@
 import { Link } from "react-router-dom"
 import { siteConfig } from "@/config/site"
 import type { MainNavItems } from "@/types"
-import { Icons } from "@/components/Icons"
+import { Icons } from "@/components/icons"
 import {
     NavigationMenu,
     NavigationMenuContent,
@@ -19,7 +19,7 @@ interface MainNavigationProps {
 
 export default function MainNavigation({ items }: MainNavigationProps) {
     return (
-        <div className="hidden lg:flex  gap-6 md:gap-10">
+        <div className="hidden lg:flex  gap-6 md:gap-10 pl-6">
             <Link to="/" className=" items-center space-x-2 flex">
                 <Icons.logo className="size-7" />
                 <span className="font-bold inline-block">{siteConfig.name}</span>
@@ -64,8 +64,7 @@ export default function MainNavigation({ items }: MainNavigationProps) {
                                 </Link>
                             </NavigationMenuLink>
                         </NavigationMenuItem>
-                    ))},
-
+                    ))}
                 </NavigationMenuList>
             </NavigationMenu>
         </div>
