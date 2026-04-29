@@ -1,4 +1,5 @@
-import { HomeIcon } from "lucide-react"
+import { HomeIcon, PaperPlaneIcon, ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import { Loader2 } from "lucide-react";
 import { CiShop } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";
 
@@ -8,4 +9,7 @@ export const Icons = {
     logo: CiShop,
     home: HomeIcon,
     menu: RxHamburgerMenu,
+    paperPlane: PaperPlaneIcon,
+    spinner: Loader2,
+    exclamation: ExclamationTriangleIcon,
 }
