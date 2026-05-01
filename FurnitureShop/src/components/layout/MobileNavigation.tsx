@@ -16,13 +16,28 @@ import {
     AccordionTrigger,
 } from "@/components/ui/accordion"
 import { ScrollArea } from "@/components/ui/scroll-area"
-
+import { useEffect, useState } from "react"
 
 interface MobileNavigationProps {
     items?: MainNavItems;
 }
 
 export default function MobileNavigation({ items }: MobileNavigationProps) {
+    const [isDesktop, setIsDesktop] = useState(false);
+    const query = "(min-width: 1024px)";
+
+    useEffect(() => {
+        function onChange(e: MediaQueryListEvent) {
+            setIsDesktop(e.matches);
+        }
+        const result = matchMedia(query);
+        result.addEventListener("change", onChange);
+        return () => result.removeEventListener("change", onChange);
+    }, [query]);
+
+    if (isDesktop) {
+        return null;
+    }
     return (
         <div className="lg:hidden">
             <Sheet>
