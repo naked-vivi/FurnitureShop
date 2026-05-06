@@ -1,8 +1,29 @@
+import BlogCard from "@/components/blogs/BlogCard"
 import CarouselCard from "@/components/products/CarouselCard"
 import { Button } from "@/components/ui/button"
 import Couch from "@/data/images/couch.png"
+import { posts } from "@/data/posts"
 import { products } from "@/data/products"
 import { Link } from "react-router"
+
+const SamplePosts = posts.slice(0, 3)
+
+const Title = ({
+    title,
+    href,
+    sideText
+}: {
+    title: string
+    href: string
+    sideText?: string
+}) => (
+    <div className="flex flex-col md:flex-row justify-between mt-28 mb-10 px-4 md:px-0">
+        <h2 className="text-2xl font-bold mb-4 md:mb-0">{title}</h2>
+        <Link to={href} className="text-semibold text-muted-foreground underline">
+            {sideText}
+        </Link>
+    </div>
+)
 
 function Home() {
     return (
@@ -29,6 +50,8 @@ function Home() {
                 <img src={Couch} alt="Couch" className="w-full lg:w-3/5" />
             </div>
             <CarouselCard products={products} />
+            <Title title="Recent Blogs" href="/blogs" sideText="View all blogs" />
+            <BlogCard posts={SamplePosts} />
         </div>
     )
 }
