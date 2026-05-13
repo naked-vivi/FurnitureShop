@@ -1,4 +1,10 @@
-import { HomeIcon, PaperPlaneIcon, ExclamationTriangleIcon } from "@radix-ui/react-icons";
+import {
+    HomeIcon,
+    PaperPlaneIcon,
+    ExclamationTriangleIcon,
+    ArrowLeftIcon,
+    LayersIcon,
+} from "@radix-ui/react-icons";
 import { Loader2 } from "lucide-react";
 import { CiShop } from "react-icons/ci";
 import { RxHamburgerMenu } from "react-icons/rx";
@@ -12,4 +18,6 @@ export const Icons = {
     paperPlane: PaperPlaneIcon,
     spinner: Loader2,
     exclamation: ExclamationTriangleIcon,
+    arrowLeft: ArrowLeftIcon,
+    layer: LayersIcon,
 }

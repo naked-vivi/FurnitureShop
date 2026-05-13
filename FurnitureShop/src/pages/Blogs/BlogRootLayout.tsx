@@ -7,3 +7,5 @@ export function BlogRootLayout() {
         </div>
     )
 }
+
+// export default BlogRootLayout;
