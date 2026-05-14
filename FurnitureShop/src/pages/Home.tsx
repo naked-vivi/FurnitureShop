@@ -1,12 +1,14 @@
 import BlogCard from "@/components/blogs/BlogCard"
 import CarouselCard from "@/components/products/CarouselCard"
+import ProductCard from "@/components/products/ProductCard"
 import { Button } from "@/components/ui/button"
 import Couch from "@/data/images/couch.png"
 import { posts } from "@/data/posts"
 import { products } from "@/data/products"
 import { Link } from "react-router"
 
-const SamplePosts = posts.slice(0, 3)
+const SamplePosts = posts.slice(0, 3);
+const SampleProducts = products.slice(0, 4);
 
 const Title = ({
     title,
@@ -50,7 +52,13 @@ function Home() {
                 <img src={Couch} alt="Couch" className="w-full lg:w-3/5" />
             </div>
             <CarouselCard products={products} />
-            <Title title="Recent Blogs" href="/blogs" sideText="View all blogs" />
+            <Title title="Featured Products" href="/products" sideText="View All Products" />
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 px-4 md:px-0 gap-4">
+                {SampleProducts.map((product) =>
+                    <ProductCard key={product.id} product={product} />
+                )}
+            </div>
+            <Title title="Recent Blogs" href="/blogs" sideText="View All Blogs" />
             <BlogCard posts={SamplePosts} />
         </div>
     )

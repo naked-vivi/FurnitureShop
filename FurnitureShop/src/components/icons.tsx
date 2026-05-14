@@ -4,6 +4,7 @@ import {
     ExclamationTriangleIcon,
     ArrowLeftIcon,
     LayersIcon,
+    PlusIcon,
 } from "@radix-ui/react-icons";
 import { Loader2 } from "lucide-react";
 import { CiShop } from "react-icons/ci";
@@ -20,4 +21,5 @@ export const Icons = {
     exclamation: ExclamationTriangleIcon,
     arrowLeft: ArrowLeftIcon,
     layer: LayersIcon,
+    plus: PlusIcon,
 }
