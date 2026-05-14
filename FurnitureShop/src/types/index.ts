@@ -35,4 +35,9 @@ export interface Post {
     tags: string[];
 }
 
+export interface Category {
+    id: string;
+    label: string;
+}
+
 

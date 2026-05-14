@@ -6,6 +6,9 @@ import Error from "./pages/Error";
 import Blog from "./pages/Blogs/Blog";
 import BlogDetail from "./pages/Blogs/BlogDetail";
 import { BlogRootLayout } from "./pages/Blogs/BlogRootLayout";
+import ProductRootLayout from "./pages/Products/ProductRootLayout";
+import Product from "./pages/Products/Product";
+import ProductDetail from "./pages/Products/ProductDetail";
 
 export const router = createBrowserRouter(
     [
@@ -33,6 +36,20 @@ export const router = createBrowserRouter(
                         {
                             path: ":postId",
                             Component: BlogDetail
+                        }
+                    ]
+                },
+                {
+                    path: "products",
+                    element: <ProductRootLayout />,
+                    children: [
+                        {
+                            index: true,
+                            Component: Product
+                        },
+                        {
+                            path: ":productId",
+                            Component: ProductDetail
                         }
                     ]
                 }
